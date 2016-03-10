@@ -4,7 +4,7 @@ A GitBook for the Building Real-Time [Laravel](http://laravel.com) Apps with [Pu
 
 You can find the current version of the Building Real-Time Laravel Apps with Pusher workshop here:
 
-https://pusher-community.github.io/real-time-laravel/
+http://leggetter.github.io/realtime-laravel
 
 ## Prerequisites
 
