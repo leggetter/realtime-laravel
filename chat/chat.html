@@ -1,0 +1,796 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Building Authenticated Real-Time Chat | Building Real-Time Laravel Apps with Pusher</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.2.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+        <link rel="stylesheet" href="../assets/styles/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../chat/learned.html" />
+    
+    
+    <link rel="prev" href="../chat/index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="5.1" data-basepath=".." data-revision="Fri Aug 28 2015 19:38:34 GMT+0100 (BST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="introduction/index.html">
+            
+                
+                    <a href="../introduction/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        About this Workshop
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="introduction/what-is-pusher.html">
+            
+                
+                    <a href="../introduction/what-is-pusher.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        What is Pusher?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introduction/pusher-use-cases.html">
+            
+                
+                    <a href="../introduction/pusher-use-cases.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Pusher Use Cases
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="getting-started/index.html">
+            
+                
+                    <a href="../getting-started/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Getting Started
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="getting-started/sign-up.html">
+            
+                
+                    <a href="../getting-started/sign-up.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Sign up for Pusher
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="getting-started/laravel-app.html">
+            
+                
+                    <a href="../getting-started/laravel-app.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Laravel App Setup
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="getting-started/setting-env-vars.html">
+            
+                
+                    <a href="../getting-started/setting-env-vars.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Setting Environment Variables
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="getting-started/laravel-pusher-bridge.html">
+            
+                
+                    <a href="../getting-started/laravel-pusher-bridge.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Laravel Pusher Bridge
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="getting-started/event-broadcaster.html">
+            
+                
+                    <a href="../getting-started/event-broadcaster.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Pusher Event Broadcaster
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="getting-started/bridge-v-broadcaster.html">
+            
+                
+                    <a href="../getting-started/bridge-v-broadcaster.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Bridge v Broadcaster
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="getting-started/server-debugging.html">
+            
+                
+                    <a href="../getting-started/server-debugging.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        Debugging Server-Side Integration with Pusher
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="getting-started/pusher-js-integration.html">
+            
+                
+                    <a href="../getting-started/pusher-js-integration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        Using the Pusher JavaScript library
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="getting-started/pusher-js-debugging.html">
+            
+                
+                    <a href="../getting-started/pusher-js-debugging.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        Debugging with the Pusher JavaScript library
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="getting-started/learned.html">
+            
+                
+                    <a href="../getting-started/learned.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.10.</b>
+                        
+                        Getting Started - What we&#39;ve learned
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="notifications/index.html">
+            
+                
+                    <a href="../notifications/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Real-Time Notifications
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="notifications/fundamentals.html">
+            
+                
+                    <a href="../notifications/fundamentals.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Fundamentals
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="notifications/trigger.html">
+            
+                
+                    <a href="../notifications/trigger.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Trigger a Notification Event
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="notifications/ui.html">
+            
+                
+                    <a href="../notifications/ui.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Building the Notification UI
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="notifications/learned.html">
+            
+                
+                    <a href="../notifications/learned.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        What we&#39;ve learned
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="activity-streams/index.html">
+            
+                
+                    <a href="../activity-streams/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Activity Streams
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="activity-streams/simple-auth.html">
+            
+                
+                    <a href="../activity-streams/simple-auth.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Super Simple Social Auth
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="activity-streams/activities.html">
+            
+                
+                    <a href="../activity-streams/activities.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Triggering Activity Events
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="activity-streams/learned.html">
+            
+                
+                    <a href="../activity-streams/learned.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        What we&#39;ve learned
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chat/index.html">
+            
+                
+                    <a href="../chat/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Chat
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="5.1" data-path="chat/chat.html">
+            
+                
+                    <a href="../chat/chat.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Building Authenticated Real-Time Chat
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="chat/learned.html">
+            
+                
+                    <a href="../chat/learned.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        What we&#39;ve learned
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="where-next/index.html">
+            
+                
+                    <a href="../where-next/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        What else can Pusher do?
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="where-next/resources.html">
+            
+                
+                    <a href="../where-next/resources.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Resources
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Building Real-Time Laravel Apps with Pusher</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="authenticated-real-time-chat">Authenticated Real-Time Chat</h1>
+<p>Let&apos;s quickly build up a chat solution from a number of templates. Then we&apos;ll look at adding <a href="https://pusher.com/docs/authenticating_users" target="_blank">authentication</a> and restricting who can subscribe to the real-time stream of chat messages.</p>
+<h2 id="basic-chat">Basic Chat</h2>
+<p>As mentioned in the chat introduction, a lot of the activity streams functionality that we&apos;ve built could be ported to support chat functionality. Instead, let&apos;s take a number of templates to give us all we need for some basic chat functionality.</p>
+<h3 id="chatcontroller">ChatController</h3>
+<p><i class="fa fa-rocket fa-2"></i> Save the <a href="../assets/laravel_app/ChatController.php">ChatController.php template</a> to <code>app/Http/Controllers/ChatController.php</code>.</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">App</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Controllers</span>;
+
+<span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Request</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Response</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Support</span>\<span class="hljs-title">Facades</span>\<span class="hljs-title">App</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Support</span>\<span class="hljs-title">Facades</span>\<span class="hljs-title">Session</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChatController</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Controller</span>
+</span>{
+    <span class="hljs-keyword">var</span> <span class="hljs-variable">$pusher</span>;
+    <span class="hljs-keyword">var</span> <span class="hljs-variable">$user</span>;
+    <span class="hljs-keyword">var</span> <span class="hljs-variable">$chatChannel</span>;
+
+    <span class="hljs-keyword">const</span> DEFAULT_CHAT_CHANNEL = <span class="hljs-string">&apos;chat&apos;</span>;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__construct</span><span class="hljs-params">()</span>
+    </span>{
+        <span class="hljs-variable">$this</span>-&gt;pusher = App::make(<span class="hljs-string">&apos;pusher&apos;</span>);
+        <span class="hljs-variable">$this</span>-&gt;user = Session::get(<span class="hljs-string">&apos;user&apos;</span>);
+        <span class="hljs-variable">$this</span>-&gt;chatChannel = <span class="hljs-keyword">self</span>::DEFAULT_CHAT_CHANNEL;
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getIndex</span><span class="hljs-params">()</span>
+    </span>{
+        <span class="hljs-keyword">if</span>(!<span class="hljs-variable">$this</span>-&gt;user)
+        {
+            <span class="hljs-keyword">return</span> redirect(<span class="hljs-string">&apos;auth/github?redirect=/chat&apos;</span>);
+        }
+
+        <span class="hljs-keyword">return</span> view(<span class="hljs-string">&apos;chat&apos;</span>, [<span class="hljs-string">&apos;chatChannel&apos;</span> =&gt; <span class="hljs-variable">$this</span>-&gt;chatChannel]);
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">postMessage</span><span class="hljs-params">(Request <span class="hljs-variable">$request</span>)</span>
+    </span>{
+        <span class="hljs-variable">$message</span> = [
+            <span class="hljs-string">&apos;text&apos;</span> =&gt; e(<span class="hljs-variable">$request</span>-&gt;input(<span class="hljs-string">&apos;chat_text&apos;</span>)),
+            <span class="hljs-string">&apos;username&apos;</span> =&gt; <span class="hljs-variable">$this</span>-&gt;user-&gt;getNickname(),
+            <span class="hljs-string">&apos;avatar&apos;</span> =&gt; <span class="hljs-variable">$this</span>-&gt;user-&gt;getAvatar(),
+            <span class="hljs-string">&apos;timestamp&apos;</span> =&gt; (time()*<span class="hljs-number">1000</span>)
+        ];
+        <span class="hljs-variable">$this</span>-&gt;pusher-&gt;trigger(<span class="hljs-variable">$this</span>-&gt;chatChannel, <span class="hljs-string">&apos;new-message&apos;</span>, <span class="hljs-variable">$message</span>);
+    }
+}
+</code></pre>
+<p>This controller makes sure the user is logged in via GitHub when the <code>/chat</code> (the <code>getIndex()</code> function) is accessed.</p>
+<p>The <code>postMessage(Request $request)</code> function is used to handle an AJAX request from the view and trigger a <code>new-message</code> event on a channel named <code>chat</code>. The event payload consists of the text supplied by the user, their username, their avatar URL, and the timestamp (milliseconds since the epoch) when the message was received.</p>
+<p><i class="fa fa-rocket fa-2"></i> Add the new controller to <code>app/Http/routes.php</code>:</p>
+<pre><code class="lang-php">Route::controller(<span class="hljs-string">&apos;chat&apos;</span>, <span class="hljs-string">&apos;ChatController&apos;</span>);
+</code></pre>
+<h3 id="chat-view">Chat View</h3>
+<p><i class="fa fa-rocket fa-2"></i> Save the <a href="../assets/laravel_app/chat.blade.php">chat.blade.php template</a> to <code>resources/views/chat.blade.php</code>.</p>
+<p>Whenever a message is to be sent to the server the <code>sendMessage()</code> function is called - triggered either by a button being clicked or the user pressing <code>enter</code>.</p>
+<p>The <code>chat</code> channel is subscribed to, and the <code>new-message</code> bound to with a <code>addMessage</code> callback handler.</p>
+<p>The <code>addMessage</code> function builds a message element, taking all the values from the <code>data</code> event payload` and adds it to the UI.</p>
+<h3 id="try-out-the-chat-app">Try out the Chat app</h3>
+<p><i class="fa fa-rocket fa-2"></i> Navigate to <a href="http://localhost:8000/chat" target="_blank">http://localhost:8000/chat</a> to see the chat application in action.</p>
+<div class="alert alert-info">
+  <i class="fa fa-graduation-cap fa-2"></i> <strong>Hmmmm, chatting to yourself is just no fun!</strong>
+
+  <p>It&apos;s really no fun to chat with yourself. So, if you&apos;re in a instructor-lead workshop you should now have been given a set of Pusher application credentials that everybody in the workshop can use. Replace the ones you have in your <code>.env</code> with these new ones, refresh your app and start chatting with the other workshop attendees.</p>
+</div>
+
+<h2 id="adding-authentication">Adding Authentication</h2>
+<p>Pusher has been built with integration in mind; in this case to make it as easy as possible to integrate with existing technologies and framework mechanisms. In our app we have a very basic - albeit, a bit hacky - authentication mechanism. That is, does a <code>user</code> exist in the <code>Session</code>.</p>
+<p>By demonstrating how to use this to authenticate mechanism with Pusher it should be easy to see how you can integrate other &quot;less hacky&quot; solutions.</p>
+<h3 id="private-channels">Private Channels</h3>
+<p>Pusher provides a type of channel called a <a href="https://pusher.com/docs/private_channels" target="_blank">private channel</a> that require authentication in order for a subscription to that channel to be allowed.</p>
+<p>Private channels are identified by a simple <code>private-</code> naming prefix e.g. <code>private-chat</code>. When the Pusher JavaScript library sees that a subscription is made to a channel with a <code>private-</code> prefix the library itself will make a <code>POST</code> request to an authentication endpoint on the server the app is served from. This will be your own application server. By default this endpoint will be <code>/pusher/auth</code>, but it can be configured.</p>
+<p><i class="fa fa-rocket fa-2"></i> To see this in action, navigate to <a href="http://localhost:8000/chat" target="_blank">http://localhost:8000/chat</a>, open up the developer tools in your browser and go to the network tab.</p>
+<p><i class="fa fa-rocket fa-2"></i> Next, change the name of the channel that&apos;s we&apos;re subscribing to. Change it from <code>chat</code> to <code>private-chat</code>. This is configured for both the controller (for event triggering) and the view (for subscribing) in <code>app/Http/ChatController::DEFAULT_CHAT_CHANNEL</code>.</p>
+<p><i class="fa fa-rocket fa-2"></i> In the developer tools network tab you&apos;ll see a <code>POST</code> request to <a href="http://localhost:8000/pusher/auth" target="_blank">http://localhost:8000/pusher/auth</a>. Not only do we not have a route set up for this, but upon closer inspection you&apos;ll also see that the response is a <code>500</code> error complaining about a <code>TokenMismatchException</code>.</p>
+<p>This exception is being caused by Laravel&apos;s <a href="http://laravel.com/docs/master/routing#csrf-protection" target="_blank">CSRF (Cross Site Resource Forger) protection</a>. Those eagle-eyed amongst you may have already seen <code>$.ajaxSetup</code> being called at the top of our views in order to send a <code>X-CSRF-TOKEN</code> header which fixes this for jQuery AJAX calls.</p>
+<p><i class="fa fa-rocket fa-2"></i> Let&apos;s also send the <code>X-CSRF-TOKEN</code> header with the Pusher authentication AJAX requests. The second parameter to the <code>Pusher</code> constructor is for options in the form of an object literal.</p>
+<p>Update the line that instantiates a Pusher instance to pass <code>auth</code> configuration:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> pusher = <span class="hljs-keyword">new</span> Pusher(<span class="hljs-string">&apos;{{env(&quot;PUSHER_KEY&quot;)}}&apos;</span>, {
+    auth: {
+        headers: {
+            <span class="hljs-string">&apos;X-CSRF-TOKEN&apos;</span>: $(<span class="hljs-string">&apos;meta[name=&quot;csrf-token&quot;]&apos;</span>).attr(<span class="hljs-string">&apos;content&apos;</span>)
+        }
+    }
+});
+</code></pre>
+<p>The <code>X-CSRF-TOKEN</code> value is being retrieved from a <code>&lt;meta&gt;</code> tag defined in the header in the same way as is used in the <code>$.ajaxSetup</code>.</p>
+<p><i class="fa fa-rocket fa-2"></i> Now try refreshing the chat application. We&apos;ll now get a <code>404</code> error for the request to <code>/pusher/auth</code>. This means the CSRF problem has been fixed, but we still don&apos;t have the auth endpoint - <code>/pusher/auth</code> isn&apos;t defined an a route anywhere in our app!</p>
+<p>Let&apos;s make sure the Pusher JavaScript library is going to authenticate against a valid route.</p>
+<p><i class="fa fa-rocket fa-2"></i> Add the following function to <code>app/Http/Controllers/ChatController.php</code>:</p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">postAuth</span><span class="hljs-params">(Request <span class="hljs-variable">$request</span>)</span>
+</span>{
+}
+</code></pre>
+<p><i class="fa fa-rocket fa-2"></i> Next, we should configure the <code>Pusher</code> JavaScript instance to use our new <code>/chat/auth</code> route. In <code>resources/views/chat.blade.php</code> update the line that instantiates a Pusher instance to pass an <code>authEndpoint</code> option with the <code>/chat/auth</code> value:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> pusher = <span class="hljs-keyword">new</span> Pusher(<span class="hljs-string">&apos;{{env(&quot;PUSHER_KEY&quot;)}}&apos;</span>, {
+    authEndpoint: <span class="hljs-string">&apos;/chat/auth&apos;</span>,
+    auth: {
+        headers: {
+            <span class="hljs-string">&apos;X-CSRF-TOKEN&apos;</span>: $(<span class="hljs-string">&apos;meta[name=&quot;csrf-token&quot;]&apos;</span>).attr(<span class="hljs-string">&apos;content&apos;</span>)
+        }
+    }
+});
+</code></pre>
+<p><i class="fa fa-rocket fa-2"></i> Refresh the page and this time you&apos;ll see a <code>POST</code> request to <code>/chat/auth</code> which succeeds. But if you check the browser console you&apos;ll see a log message saying <code>Pusher : No callbacks on private-chat for pusher:subscription_error</code>.</p>
+<p>This is because the authentication endpoint (<code>/chat/auth</code>) needs to return a signature that can then be used by the Pusher JavaScript library as part of the subscription with the Pusher service. If the Pusher service fails to validate the signature the subscription will be disallowed. In this case our endpoint isn&apos;t returning any data so the subscription is obviously going to fail.</p>
+<p><i class="fa fa-rocket fa-2"></i> If you look at the parameters passed in the <code>POST</code> request to <code>/chat/auth</code> you&apos;ll see a <code>socket_id</code> and a <code>channel_name</code>. The <code>socket_id</code> is a unique ID for the connection to Pusher and the <code>channel_name</code> is the name of the channel that the client is attempting to subscribe to.</p>
+<p><img src="../assets/img/network-auth-post.png" alt=""></p>
+<p>We use these values to create a signature using the Pusher PHP library - after we&apos;ve written our own logic to determine if we want the current user to be able to subscribe to the channel.</p>
+<p><i class="fa fa-rocket fa-2"></i> Update <code>ChatController::postAuth</code> with the following authentication logic:</p>
+<ul>
+<li>Check if a user exists.</li>
+<li>if we have a user we&apos;re going to allow the subscription to succeed.<ul>
+<li>fetch the <code>socket_id</code> and <code>channel_name</code> values from the <code>$request</code> e.g. <code>$channelName = $request-&gt;input(&apos;channel_name&apos;);</code></li>
+<li>create a signature using <code>$auth = $this-&gt;pusher-&gt;socket_auth($channelName, $socketId)</code> (<a href="https://github.com/pusher/pusher-http-php#authenticating-private-channels" target="_blank">docs</a>)</li>
+<li>respond to the request with that signature</li>
+</ul>
+</li>
+<li>If there is no user then we&apos;ll respond with a <code>401 Unauthorized</code>.</li>
+</ul>
+<p><i class="fa fa-rocket fa-2"></i> Once you&apos;ve got the logic in place use the Pusher Debug Console and the <a href="https://pusher.com/docs/debugging#pusher_logging" target="_blank">Pusher JavaScript logging</a> to verify the <code>private-chat</code> channel is being used.</p>
+<p><strong>You now have an authenticated real-time chat application</strong>.</p>
+<p>Although Pusher channel authentication can take a little bit of work to get your head around, once you understand it you can easily see how it will integrate with most authentication mechanisms - either by using sessions or by passing values down with the authentication request as we did with the CSRF value.</p>
+<h2 id="what-s-next">What&apos;s next?</h2>
+<p>Let&apos;s briefly cover <a href="learned.html">what we&apos;ve learned</a> in this section.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chat/index.html" class="navigation navigation-prev " aria-label="Previous page: Chat"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chat/learned.html" class="navigation navigation-next " aria-label="Next page: What we&#39;ve learned"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"ga":{"token":"UA-59859803-7","configuration":"auto"}};
+    gitbook.start(config);
+});
+</script>
+
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-59859803-7', 'auto');ga('send', 'pageview');</script>
+    </body>
+    
+</html>

@@ -1,0 +1,724 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Laravel Pusher Bridge | Building Real-Time Laravel Apps with Pusher</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.2.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+        <link rel="stylesheet" href="../assets/styles/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../getting-started/event-broadcaster.html" />
+    
+    
+    <link rel="prev" href="../getting-started/setting-env-vars.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="2.4" data-basepath=".." data-revision="Fri Aug 28 2015 19:38:34 GMT+0100 (BST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="introduction/index.html">
+            
+                
+                    <a href="../introduction/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        About this Workshop
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="introduction/what-is-pusher.html">
+            
+                
+                    <a href="../introduction/what-is-pusher.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        What is Pusher?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introduction/pusher-use-cases.html">
+            
+                
+                    <a href="../introduction/pusher-use-cases.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Pusher Use Cases
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="getting-started/index.html">
+            
+                
+                    <a href="../getting-started/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Getting Started
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="getting-started/sign-up.html">
+            
+                
+                    <a href="../getting-started/sign-up.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Sign up for Pusher
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="getting-started/laravel-app.html">
+            
+                
+                    <a href="../getting-started/laravel-app.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Laravel App Setup
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="getting-started/setting-env-vars.html">
+            
+                
+                    <a href="../getting-started/setting-env-vars.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Setting Environment Variables
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4" data-path="getting-started/laravel-pusher-bridge.html">
+            
+                
+                    <a href="../getting-started/laravel-pusher-bridge.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Laravel Pusher Bridge
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="getting-started/event-broadcaster.html">
+            
+                
+                    <a href="../getting-started/event-broadcaster.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Pusher Event Broadcaster
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="getting-started/bridge-v-broadcaster.html">
+            
+                
+                    <a href="../getting-started/bridge-v-broadcaster.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Bridge v Broadcaster
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="getting-started/server-debugging.html">
+            
+                
+                    <a href="../getting-started/server-debugging.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        Debugging Server-Side Integration with Pusher
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="getting-started/pusher-js-integration.html">
+            
+                
+                    <a href="../getting-started/pusher-js-integration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        Using the Pusher JavaScript library
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="getting-started/pusher-js-debugging.html">
+            
+                
+                    <a href="../getting-started/pusher-js-debugging.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        Debugging with the Pusher JavaScript library
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="getting-started/learned.html">
+            
+                
+                    <a href="../getting-started/learned.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.10.</b>
+                        
+                        Getting Started - What we&#39;ve learned
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="notifications/index.html">
+            
+                
+                    <a href="../notifications/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Real-Time Notifications
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="notifications/fundamentals.html">
+            
+                
+                    <a href="../notifications/fundamentals.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Fundamentals
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="notifications/trigger.html">
+            
+                
+                    <a href="../notifications/trigger.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Trigger a Notification Event
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="notifications/ui.html">
+            
+                
+                    <a href="../notifications/ui.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Building the Notification UI
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="notifications/learned.html">
+            
+                
+                    <a href="../notifications/learned.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        What we&#39;ve learned
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="activity-streams/index.html">
+            
+                
+                    <a href="../activity-streams/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Activity Streams
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="activity-streams/simple-auth.html">
+            
+                
+                    <a href="../activity-streams/simple-auth.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Super Simple Social Auth
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="activity-streams/activities.html">
+            
+                
+                    <a href="../activity-streams/activities.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Triggering Activity Events
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="activity-streams/learned.html">
+            
+                
+                    <a href="../activity-streams/learned.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        What we&#39;ve learned
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chat/index.html">
+            
+                
+                    <a href="../chat/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Chat
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="chat/chat.html">
+            
+                
+                    <a href="../chat/chat.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Building Authenticated Real-Time Chat
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="chat/learned.html">
+            
+                
+                    <a href="../chat/learned.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        What we&#39;ve learned
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="where-next/index.html">
+            
+                
+                    <a href="../where-next/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        What else can Pusher do?
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="where-next/resources.html">
+            
+                
+                    <a href="../where-next/resources.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Resources
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Building Real-Time Laravel Apps with Pusher</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="using-a-laravel-pusher-bridge">Using a Laravel Pusher Bridge</h1>
+<p>There are a few Laravel bridges/wrappers for the Pusher PHP library that allow you to integrate with Pusher. The most popular bridge we know of is <a href="https://github.com/vinkla/pusher" target="_blank">vinkla/pusher</a> by <a href="https://github.com/vinkla" target="_blank">Vincent Klaiber</a>.</p>
+<p><i class="fa fa-rocket fa-2"></i> Let&apos;s start by installing the package:</p>
+<pre><code>&#x203A; composer require vinkla/pusher
+</code></pre><p><i class="fa fa-rocket fa-2"></i> Next let&apos;s add the vinkla/pusher package service provider to the <code>providers</code> array in <code>config/app.php</code>:</p>
+<pre><code class="lang-php">Vinkla\Pusher\PusherServiceProvider::class,
+</code></pre>
+<p>And then publish so the Pusher configuration file is copied to the <code>config</code> directory:</p>
+<pre><code>&#x203A; php artisan vendor:publish
+</code></pre><p><i class="fa fa-rocket fa-2"></i> Then set up the the vinkla/pusher vendor configuration in <code>config/pusher.php</code> to use the environment variables. Update the <code>auth_key</code>, <code>secret</code> and <code>app_id</code> values of the <code>main</code> connection as follows:</p>
+<pre><code class="lang-php"><span class="hljs-string">&apos;connections&apos;</span> =&gt; [
+
+    <span class="hljs-string">&apos;main&apos;</span> =&gt; [
+        <span class="hljs-string">&apos;auth_key&apos;</span> =&gt; env(<span class="hljs-string">&apos;PUSHER_KEY&apos;</span>),
+        <span class="hljs-string">&apos;secret&apos;</span> =&gt; env(<span class="hljs-string">&apos;PUSHER_SECRET&apos;</span>),
+        <span class="hljs-string">&apos;app_id&apos;</span> =&gt; env(<span class="hljs-string">&apos;PUSHER_APP_ID&apos;</span>),
+        <span class="hljs-string">&apos;options&apos;</span> =&gt; [],
+        <span class="hljs-string">&apos;host&apos;</span> =&gt; <span class="hljs-keyword">null</span>,
+        <span class="hljs-string">&apos;port&apos;</span> =&gt; <span class="hljs-keyword">null</span>,
+        <span class="hljs-string">&apos;timeout&apos;</span> =&gt; <span class="hljs-keyword">null</span>,
+    ],
+</code></pre>
+<div class="alert alert-warning">
+  <strong><code>config/pusher.php</code> Gotcha!</strong>
+  <p>
+  Make sure you&apos;ve updated <code>config/pusher.php</code> and <strong>not</strong> <code>vendor/vinkla/pusher/config/pusher.php</code>.
+  </p>
+</div>
+
+<p>Once that&apos;s set up we can get access to a <code>Pusher</code> instance directly using the <a href="http://laravel.com/docs/5.1/container" target="_blank">Service Container</a> or indirectly via <a href="http://laravel.com/docs/5.1/controllers#dependency-injection-and-controllers" target="_blank">Dependency Injection</a>.</p>
+<p><i class="fa fa-rocket fa-2"></i> To quickly test this, open <code>app/Http/routes.php</code> and add:</p>
+<pre><code class="lang-php"><span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Support</span>\<span class="hljs-title">Facades</span>\<span class="hljs-title">App</span>;
+
+get(<span class="hljs-string">&apos;/bridge&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-variable">$pusher</span> = App::make(<span class="hljs-string">&apos;pusher&apos;</span>);
+
+    <span class="hljs-variable">$pusher</span>-&gt;trigger( <span class="hljs-string">&apos;test-channel&apos;</span>,
+                      <span class="hljs-string">&apos;test-event&apos;</span>, 
+                      <span class="hljs-keyword">array</span>(<span class="hljs-string">&apos;text&apos;</span> =&gt; <span class="hljs-string">&apos;Preparing the Pusher Laracon.eu workshop!&apos;</span>));
+
+    <span class="hljs-keyword">return</span> view(<span class="hljs-string">&apos;welcome&apos;</span>);
+});
+</code></pre>
+<p>We&apos;ll cover the details of this in a later exercise.</p>
+<p><i class="fa fa-rocket fa-2"></i> Next we want to test that this is working. To do this:</p>
+<ol>
+<li>Open up the Pusher Debug Console for your Pusher application</li>
+<li>Run your Laravel application using <code>php artisan serve</code> (if it&apos;s not already running)</li>
+<li>In a new browser tab or window navigate to the route we&apos;ve just defined in the Laravel app, <a href="http://localhost:8000/bridge" target="_blank">http://localhost:8000/bridge</a></li>
+</ol>
+<p>You&apos;ll now see the event appear in the Pusher Debug Console. It&apos;s working!</p>
+<div class="alert alert-warning">
+  <strong>It&apos;s not working!</strong> Oh no, Something has gone wrong. Don&apos;t worry, we&apos;ll work out what&apos;s happening in an upcoming section on <a href="server-debugging.html">Debugging your server-side integration with Pusher</a>.
+</div>
+
+<h2 id="where-next">Where next?</h2>
+<p>Next, let&apos;s see how the same thing can be achieved using the <a href="event-broadcaster.html">Laravel Event Broadcaster</a>.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../getting-started/setting-env-vars.html" class="navigation navigation-prev " aria-label="Previous page: Setting Environment Variables"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../getting-started/event-broadcaster.html" class="navigation navigation-next " aria-label="Next page: Pusher Event Broadcaster"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"ga":{"token":"UA-59859803-7","configuration":"auto"}};
+    gitbook.start(config);
+});
+</script>
+
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-59859803-7', 'auto');ga('send', 'pageview');</script>
+    </body>
+    
+</html>
